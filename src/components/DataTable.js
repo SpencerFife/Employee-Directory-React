@@ -5,14 +5,14 @@ function DataTable(props) {
   return (
     <div>
       <table className="table">
-        <thread>
+        <thead>
           <tr>
             <th>Image</th>
             <th>Name</th>
             <th>Email</th>
             <th>Date of Birth</th>
           </tr>
-        </thread>
+        </thead>
         <tbody>
           {props.results.map((results, index) => (
             <tr key={index}>

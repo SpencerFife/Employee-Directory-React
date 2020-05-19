@@ -18,12 +18,14 @@ class SearchResults extends React.Component {
   }
 
   searchEmployees() {
-    API.search().then((results) => {
-      this.setState({
-        results: results.data.results,
-        filteredResults: results.data.results,
-      }).catch((err) => console.error(err));
-    });
+    API.searchUsers()
+      .then((results) => {
+        this.setState({
+          results: results.data.results,
+          filteredResults: results.data.results,
+        });
+      })
+      .catch((err) => console.error(err));
   }
   handleNameChange = (event) => {
     const name = event.target.name;
